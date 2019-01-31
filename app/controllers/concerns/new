@@ -1,0 +1,23 @@
+class StudentformsController < ApplicationController
+  before_action :set_studentform, only: [:show, :edit, :update, :destroy]
+
+  # GET /studentforms
+  # GET /studentforms.json
+def new
+  @studentform = Studentform.new
+end
+ 
+def create
+  @studentform = Studentform.new(studentform_params)
+ 
+  if @studentform.save
+    redirect_to @studentform
+  else
+    render 'new'
+  end
+end
+ 
+private
+  def studentform_params
+    params.require(:studentform).permit(:regno, :text)
+  end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regno:</strong>
+  <%= @studentform.regno %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @studentform.name %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @studentform.telephone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @studentform.address %>
+</p>
+
+<%= link_to 'Edit', edit_studentform_path(@studentform) %> |
+<%= link_to 'Back', studentforms_path %>
